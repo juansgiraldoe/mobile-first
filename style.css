@@ -230,3 +230,100 @@ main {
   border-radius: 10px;
   max-width: 300px;
 }
+.main-product-detail{
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px;
+  background-color: var(--warm-black);
+  padding-bottom: 48px;
+}
+.main-product-detail>span{
+  display: flex;
+  position: absolute;
+  width: 40px;
+  top:-12px;
+  left: calc(50% - 20px);
+}
+.descriptions-cards{
+  width: 90%;
+  margin: 0 auto 24px;
+  
+}
+.main-product-detail h2{
+  padding-top: 24px;
+  color: var(--off-white);
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.main-product-detail p{
+  color: var(--grey);
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+.product-cards--container{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  place-content: center;
+  gap: 15px;
+}
+.product-cards--container .product-detail--card {
+  width: 100%;
+  min-width: 288px;
+  max-width: 400px;
+  height: auto;
+  background-color: var(--black);
+  border-radius: 8px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 8px rgba(25, 25, 25, 0.16);
+  justify-self: center;
+}
+.product-cards--container .product-detail--card:hover{
+  scale: 1.1;
+  transition: 0.2s;
+}
+.product-cards--container .product-detail--card p{
+  text-align: left;
+}
+.product-detail--card .icon-card{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.product-detail--card .clock{
+  background-image: url('./assets/icons/clock.svg');
+}
+.product-detail--card .eye{
+  background-image: url('./assets/icons/eye.svg');
+}
+.product-detail--card .dollar{
+  background-image: url('./assets/icons/dollar-sign.svg');
+}
+.product-detail--card .check{
+  background-image: url('./assets/icons/check-circle.svg');
+}
+.product-detail--card .product-card--title{
+  margin: 8px 0 16px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  color: var(--white);
+}
+
+
+@media (min-width:769px){
+  .product-cards--container{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    place-content: center;
+    gap: 15px;
+  }
+}
